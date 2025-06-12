@@ -15,7 +15,7 @@ VCL developers can switch between different AI providers and explore commands th
 
  - Microsoft Windows 10 or newer
  - Embarcadero RAD Studio IDE 12.0 or newer (Community Edition is not supported)
- - The (GenAI)[https://getitnow.embarcadero.com/genai-optimized-openai-integration-wrapper/] package installed from GetIt
+ - The [GenAI](https://getitnow.embarcadero.com/genai-optimized-openai-integration-wrapper/) package installed from GetIt
  - DevExpress VCL Components v25.1.3 or newer
 
 ## Running the example
