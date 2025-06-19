@@ -8,6 +8,9 @@
 This is a simple example project demonstrating how to integrate AI functionality into DevExpress VCL controls using a 3rd-party AI library (GenAI) available via the GetIt Package Manager.
 VCL developers can switch between different AI providers and explore commands that DevExpress AI assistant adds to text editors (such as TcxMemo or TdxRichEditControl).
 
+> [!NOTE]
+> Until VCL/Embarcadero ships official AI-related SDK libraries, VCL developers can plug in third-party libraries or their own implementations to support different AI providers. For example, the DevExpress VCL Rich Text Editor demo ("%Public%\DevExpress VCL Demos\MegaDemos\Product Demos\ExpressRichEditControl\dxAI.ChatClient.Azure.pas" uses our Azure OpenAI service deployment via a simple `TdxAIAzureChatClient` implementation (extends our base `TdxAIChatClient` API).
+
 <Screenshot or video goes here>
 
  ## Prerequisites
@@ -22,7 +25,7 @@ VCL developers can switch between different AI providers and explore commands th
 > [!NOTE]  
 > DevExpress AI-powered extensions follow the "bring your own key" principle. DevExpress does not offer a REST API and does not ship any built-in LLMs/SLMs. You need an active subscription for the required AI service to obtain the REST API endpoint, key, and model deployment name. These variables must be specified at application startup to register AI clients and enable DevExpress AI-powered Extensions in your application.
 
-To connect to an AI provider, uncomment a TdxGenAIChatClient.Create call for the required AI provider (OpenAI, DeepSeek, or Google Gemini) and insert a valid API key instead of `'YOUR-API-KEY'`:
+To connect to an AI provider, uncomment a `TdxGenAIChatClient.Create` call for the required AI provider (OpenAI, DeepSeek, or Google Gemini) and insert a valid API key instead of `'YOUR-API-KEY'`:
 
 ```
 procedure TAIDemoMainForm.FormCreate(Sender: TObject);
