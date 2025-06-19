@@ -22,9 +22,6 @@ VCL developers can switch between different AI providers and explore commands th
 
 ## Running the example
 
-> [!NOTE]  
-> DevExpress AI-powered extensions follow the "bring your own key" principle. DevExpress does not offer a REST API and does not ship any built-in LLMs/SLMs. You need an active subscription for the required AI service to obtain the REST API endpoint, key, and model deployment name. These variables must be specified at application startup to register AI clients and enable DevExpress AI-powered Extensions in your application.
-
 To connect to an AI provider, uncomment a `TdxGenAIChatClient.Create` call for the required AI provider (OpenAI, DeepSeek, or Google Gemini) and insert a valid API key instead of `'YOUR-API-KEY'`:
 
 ```
@@ -40,6 +37,9 @@ begin
   // TdxGenAIChatClient.Create('https://generativelanguage.googleapis.com/v1beta/openai', 'YOUR-API-KEY', 'gemini-2.0-flash');
 end;
 ```
+
+> [!NOTE]
+> DevExpress AI-powered extensions follow the "bring your own key" principle. DevExpress does not offer a REST API and does not ship any built-in LLMs/SLMs. You need an active subscription for the required AI service to obtain the REST API endpoint, key, and model deployment name. These variables must be specified at application startup to register AI clients and enable DevExpress AI-powered Extensions in your application.
 
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?
