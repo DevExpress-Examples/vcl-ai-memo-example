@@ -6,7 +6,7 @@
 # VCL AI Assistant Example
 
 This is a simple example project demonstrating how to integrate AI functionality into DevExpress VCL controls using a 3rd-party AI library (GenAI) available via the GetIt Package Manager.
-VCL developers can switch between different AI providers and explore commands that DevExpress AI assistants adds to text editors (such as TcxMemo or TdxRichEditControl).
+VCL developers can switch between different AI providers and explore commands that DevExpress AI assistant adds to text editors (such as TcxMemo or TdxRichEditControl).
 
 <Screenshot or video goes here>
 
