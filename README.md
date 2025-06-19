@@ -5,13 +5,12 @@
 <!-- default badges end -->
 # VCL AI Assistant Example
 
-This is a simple example project demonstrating how to integrate AI functionality into a DevExpress VCL controls using a 3rd-party AI library (GenAI) available via the GetIt Package Manager.
-VCL developers can switch between different AI providers and explore commands that DevExpress AI assistants adds to text controls such as TcxMemo or TdxRichEditControl.
+This is a simple example project demonstrating how to integrate AI functionality into DevExpress VCL controls using a 3rd-party AI library (GenAI) available via the GetIt Package Manager.
+VCL developers can switch between different AI providers and explore commands that DevExpress AI assistants adds to text editors (such as TcxMemo or TdxRichEditControl).
 
 <Screenshot or video goes here>
 
-
-## Prerequisites
+ ## Prerequisites
 
  - Microsoft Windows 10 or newer
  - Embarcadero RAD Studio IDE 12.0 or newer (Community Edition is not supported)
@@ -19,7 +18,12 @@ VCL developers can switch between different AI providers and explore commands th
  - DevExpress VCL Components v25.1.3 or newer
 
 ## Running the example
-In order to connect to an AI provider the developer must uncomment on of the following lines and provide relevant API key.
+
+> [!NOTE]  
+> DevExpress AI-powered extensions follow the "bring your own key" principle. DevExpress does not offer a REST API and does not ship any built-in LLMs/SLMs. You need an active subscription for the required AI service to obtain the REST API endpoint, key, and model deployment name. These variables must be specified at application startup to register AI clients and enable DevExpress AI-powered Extensions in your application.
+
+To connect to an AI provider, uncomment a TdxGenAIChatClient.Create call for the required AI provider (OpenAI, DeepSeek, or Google Gemini) and insert a valid API key instead of `'YOUR-API-KEY'`:
+
 ```
 procedure TAIDemoMainForm.FormCreate(Sender: TObject);
 begin
