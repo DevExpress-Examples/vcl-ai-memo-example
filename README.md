@@ -9,6 +9,8 @@
 This is a simple example integrates AI into DevExpress VCL Controls using a 3rd-party AI library (GenAI) available via the GetIt Package Manager.
 VCL developers can switch between different AI providers and utilize commands that DevExpress AI Assistant adds to DevExpress Text Editors (such as `TcxMemo` or `TdxRichEditControl`).
 
+![DevExpress VCL AI Example](./Images/vcl-text-editor-ai-demo.gif)
+
 > [!NOTE]
 > Until Embarcadero ships official AI-related SDK libraries, VCL developers can plug in third-party libraries or leverage own implementation to support different AI providers. For example, the DevExpress VCL Rich Text Editor demo ("%Public%\DevExpress VCL Demos\MegaDemos\Product Demos\ExpressRichEditControl\dxAI.ChatClient.Azure.pas" uses our Azure OpenAI service deployment via a simple `TdxAIAzureChatClient` implementation (extends our base `TdxAIChatClient` API).
 
