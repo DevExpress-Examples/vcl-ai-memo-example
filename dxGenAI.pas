@@ -37,7 +37,8 @@ begin
 end;
 
 class function TdxGenAIChatClient.ConvertMessages(const AMessages: IEnumerable<TdxAIChatMessage>): TArray<TMessagePayload>;
-var AGenAIMessage: TMessagePayload;
+var
+  AGenAIMessage: TMessagePayload;
   ADxMessage: TdxAIChatMessage;
 begin
   Result := [];
@@ -51,7 +52,8 @@ begin
 end;
 
 class function TdxGenAIChatClient.ConvertResponse(AChat: TChat): TdxAIChatResponse;
-var ADxMessage: TdxAIChatMessage;
+var
+  ADxMessage: TdxAIChatMessage;
   AChoice: TChoice;
   AMessageText: string;
 begin
@@ -98,12 +100,12 @@ begin
     begin
       Result := PerformChatRequest(AMessages, AOptions);
     end);
-  Result.Start;
 end;
 
 function TdxGenAIChatClient.PerformChatRequest(const AMessages: IEnumerable<TdxAIChatMessage>;
   const AOptions: TdxAIChatOptions): TdxAIChatResponse;
-var AChat: TChat;
+var
+  AChat: TChat;
   AGenAIMessages: TArray<TMessagePayload>;
 begin
   AGenAIMessages := ConvertMessages(AMessages);
@@ -115,7 +117,11 @@ begin
       AParams.Model(FModel);
       AParams.Messages(AGenAIMessages);
     end);
-  Result := ConvertResponse(AChat);
+  try
+    Result := ConvertResponse(AChat);
+  finally
+    AChat.Free;
+  end;
 end;
 
 end.
