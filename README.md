@@ -26,15 +26,19 @@ To connect to an AI provider, uncomment the `TdxGenAIChatClient.Create` call for
 
 ```
 procedure TAIDemoMainForm.FormCreate(Sender: TObject);
+var
+  Client: TdxAIChatClient;
 begin
   // OpenAI
-  // TdxGenAIChatClient.Create('https://api.openai.com/v1', 'YOUR-API-KEY', 'gpt-4o-mini');
+  // Client := TdxGenAIChatClient.Create('https://api.openai.com/v1', 'YOUR-API-KEY', 'gpt-4o-mini');
 
   // DeepSeek
-  // TdxGenAIChatClient.Create('https://api.deepseek.com/v1', 'YOUR-API-KEY', 'deepseek-chat');
+  // Client := TdxGenAIChatClient.Create('https://api.deepseek.com/v1', 'YOUR-API-KEY', 'deepseek-chat');
 
   // Google Gemini
-  // TdxGenAIChatClient.Create('https://generativelanguage.googleapis.com/v1beta/openai', 'YOUR-API-KEY', 'gemini-2.0-flash');
+  // Client := TdxGenAIChatClient.Create('https://generativelanguage.googleapis.com/v1beta/openai', 'YOUR-API-KEY', 'gemini-2.0-flash');
+
+  TdxAIChatClients.AddChatClient(Client);
 end;
 ```
 
