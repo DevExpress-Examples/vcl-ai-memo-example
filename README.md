@@ -6,7 +6,7 @@
 # DevExpress VCL/Delphi - Integrate a 3rd-party AI/LLM provider library
 
 This simple example integrates AI into DevExpress VCL Controls using a 3rd-party AI library (GenAI) available via the GetIt Package Manager.
-VCL developers can switch between different AI providers and utilize commands that DevExpress AI Assistant adds to DevExpress Text Editors (such as `TcxMemo` or `TdxRichEditControl`).
+VCL developers can switch between different AI providers and utilize commands that DevExpress AI Assistant adds to DevExpress Text Editors (such as [TcxMemo](https://docs.devexpress.com/VCL/cxMemo.TcxMemo) or [TdxRichEditControl](https://docs.devexpress.com/VCL/dxRichEdit.Control.TdxRichEditControl)).
 
 ![DevExpress VCL AI Example](/CS/Images/vcl-text-editor-ai-demo.gif)
 
